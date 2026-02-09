@@ -5,7 +5,21 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  nitro: {
+    experimental: {
+      websocket: true
+    }
+  },
   css: ["./app/tailwind.css"],
   devtools: { enabled: true },
-  modules: ['@nuxt/icon', '@nuxt/eslint', '@nuxt/hints']
+  modules: [
+    '@nuxt/icon',
+    '@nuxt/eslint',
+    '@nuxt/hints',
+    '@vueuse/nuxt'
+  ],
+  runtimeConfig: {
+    kafkaAddress: "0.0.0.0",  
+    kafkaPort: 9092,
+  }
 })

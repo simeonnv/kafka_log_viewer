@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --dotenv .env.dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -17,8 +17,10 @@
     "@vueuse/nuxt": "14.2.0",
     "daisyui": "^5.5.17",
     "eslint": "^9.0.0",
+    "kafkajs": "^2.2.4",
     "nuxt": "^4.3.0",
     "tailwindcss": "^4.1.18",
+    "uuid": "^13.0.0",
     "vue": "^3.5.27",
     "vue-router": "^4.6.4"
   }
